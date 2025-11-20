@@ -7,7 +7,7 @@ Phase 3 is triggered when price movement extends beyond the range of **Pool 2**.
 ### 1. Withdraw from Pool 1
 Since Pool 1 is inactive (composed entirely of USDC due to upward move):
 * **Harvest Yield.**
-* **Withdraw 96% of Liquidity** from Pool 1. Do not close the pool completely.
+* **Withdraw 98% of Liquidity** from Pool 1. Do not close the pool completely.
 
 ### 2. Reset Short Perpetual (Stop Loss)
 * **Close Previous Short:** The existing short is acting as a stop loss. Close it and Swap the resulting SOL back to USDC to realize the specific loss/profit profile.
