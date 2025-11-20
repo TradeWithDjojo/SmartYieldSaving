@@ -35,9 +35,8 @@ This position acts as a hedge against downward price movement.
 
 ### 2.1 Maximum Notional Value
 The maximum allowable size for your short position is:
-$$
-\text{Max Short Notional} = 50\% \times (\text{USDC required for Orca Pool})
-$$
+$$\text{Max Short Notional} = 0.5 \times (\text{USDC required for Orca Pool})$$
+
 
 ### 2.2 Leverage Safety
 * Set leverage such that the **Liquidation Price** is at least **25% away** (1.25x) from your entry price.
