@@ -38,7 +38,9 @@ The maximum allowable size for your short position is:
 $$\text{Max Short Notional} = 0.5 \times (\text{USDC required for Orca Pool})$$
 
 > **Note:** The USDC required for the Orca Pool is not equal to the total pool deposit.  
-> In practice, it typically represents approximately 50% of the overall deposit amount.
+> In practice, it typically represents about 50% of the overall deposit amount.  
+> Therefore, the Max Short Notional can be expressed as:  
+> **Max Short Notional = 0.5 × (50% × Total Pool Deposit)**
 
 ### 2.2 Leverage Safety
 * Set leverage such that the **Liquidation Price** is at least **25% away** (1.25x) from your entry price.
