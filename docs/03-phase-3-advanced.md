@@ -9,8 +9,8 @@ Since Pool 1 is inactive (composed entirely of USDC due to upward move):
 * **Harvest Yield.**
 * **Withdraw 98% of Liquidity** from Pool 1. Do not close the pool completely.
 
-### 2. Reset Short Perpetual (Stop Loss)
-* **Close Previous Short:** The existing short is acting as a stop loss. Close it and Swap the resulting SOL back to USDC to realize the specific loss/profit profile.
+### 2. Reset Short Perpetual (Stop Loss) and Sell SOL (Take Profit)
+* **Close Previous Short:** The existing short is acting as a stop loss. Close it and Swap the resulting SOL back to USDC to realize the specific loss & profit profile.
 * **Open New Short:** Re-establish the baseline hedge.
     $$\text{Notional Value (Short 3)} = \text{Notional Value of Phase 1}$$
 
@@ -20,15 +20,23 @@ Since Pool 1 is inactive (composed entirely of USDC due to upward move):
 
 ---
 
+## Execution Checklist (Bullish Scenario)
+1.  [ ] Harvest Pool 1 & Withdraw 98% Liquidity (USDC).
+2.  [ ] **Swap USDC → SOL** (Phase 1 Amount).
+3.  [ ] **Open New Short Perp** (Phase 1 Notional).
+4.  [ ] **Deposit into Orca** (Pool 3).
+
+---
+
 ## Scenario B: Price Reaches MIN Price of Pool 2 (Bearish)
 
 ### 1. Withdraw from Pool 1
 Since Pool 1 is inactive (composed entirely of SOL due to downward move):
 * **Harvest Yield.**
-* **Withdraw 98% of Liquidity** from Pool 1 (SOL portion).
+* **Withdraw 98% of Liquidity** from Pool 1 (SOL portion). The released SOL will be used for the lending strategy below.
 
 ### 2. Close Short Perpetual (Take Profit)
-* Close the previous short position to realize profit. The released SOL will be used for the lending strategy below.
+* Close the previous short position to realize profit. 
 
 ### 3. Supply-Borrow Strategy (Jupiter Lend)
 To increase capital efficiency without over-leveraging:
