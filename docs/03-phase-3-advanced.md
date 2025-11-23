@@ -7,10 +7,10 @@ Phase 3 is triggered when price movement extends beyond the range of **Pool 2**.
 ### 1. Withdraw from Pool 1
 Since Pool 1 is inactive (composed entirely of USDC due to upward move):
 * **Harvest Yield.**
-* **Withdraw 98% of Liquidity** from Pool 1. Do not close the pool completely.
+* **Withdraw 98% of Liquidity** from Pool 1 (USDC portion). Do not close the pool completely.
 
 ### 2. Reset Short Perpetual (Stop Loss) and Sell SOL (Take Profit)
-* **Close Previous Short:** The existing short is acting as a stop loss. Close it and Swap the resulting SOL back to USDC to realize the specific loss & profit profile.
+* **Close Previous Short & Sell SOL:** The existing short is acting as a stop loss, but the SOL position is in profit. Close it and Swap the SOL back to USDC to make a small profit.
 * **Open New Short:** Re-establish the baseline hedge.
     $$\text{Notional Value (Short 3)} = \text{Notional Value of Phase 1}$$
 
